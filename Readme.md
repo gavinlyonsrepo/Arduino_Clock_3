@@ -4,7 +4,7 @@ Overview
 * Name : clock_number_3
 * Title : Arduino Real Time Alarm Clock DS3231 with TM1638
 * Description : Arduino Clock with Battery backup (real time clock), 
-Time, Date, Alarm, Temperature, TM1638 seven segment module output and input, Sleep mode.
+Time, Date, Alarm, Temperature, TM1638 seven segment module output and input, Display Sleep mode.
 * Author: Gavin Lyons
 
 Libraries
@@ -41,7 +41,8 @@ alarms and a programmable square-wave output are
 provided. Address and data are transferred serially
 through an I2C bidirectional bus.
 
-This project allows saving of an Alarm in the RTC and triggers on the SQW output of DS3231
+This project allows saving of an Alarm in the RTC and triggers on the SQW output of DS3231.
+Pressing S1 stops the Alarm once it is switched on.
 An Buzzer is connected as an alarm. You may wish to modify these modules,
 depending on your use case, some users remove the power led, charging circuit and pull up resistors.
 See here for more info [URL link](https://protosupplies.com/product/ds3231-rtc-with-eeprom-module/)
@@ -63,13 +64,12 @@ They consist of an 8-digit seven segment display with decimal points,
 
 Menu modes , button function
 --------------------------------
-A spreadsheet in "doc folder of this repo shows the button functions,
+A spreadsheet in "doc" folder of this repo shows the button functions(S1 to S8),
 on TM1638 module for the various menus. File is called Menus.gnumeric.
 
 Parts List
 ------------------------------
 In the doc folder there is an eagle subfolder with the BOM and schematic image.
-
 
 Schematic
 ---------------------------

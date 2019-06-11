@@ -37,7 +37,7 @@ bool LEDS_on_flag = false;
 bool Alarm_set = false;
 uint8_t MainMode = 2;
 
-// ********************* FUNCTIONS PROTOTYPES*************************
+// ********************* FUNCTIONS PROTOTYPES **************
 void MainMenu(void); 
 void Display(uint8_t DisplayMode); 
 void ShowAlarm(void); 
@@ -51,7 +51,7 @@ uint8_t buttonsRead(void);
 void setLEDonoff(void); 
 
 
-//*************************** SETUP ************************
+//***************** SETUP ************************
 void setup() {
   /*Serial for debug only
   Serial.begin(9600);
@@ -78,7 +78,7 @@ void setup() {
 
 
 
-//*************************** MAIN LOOP ************************
+//*************************** MAIN LOOP **************
 void loop() {
 
   if (MainMode == 2) Display(MainMode);   //Default display
@@ -88,11 +88,12 @@ void loop() {
   {
     RTC.alarm(ALARM_2);    // reset the alarm flag
     digitalWrite(buzzer, HIGH);
+    MainMode = 2;
   }
 }
 
 
-// ********************* FUNCTIONS *************************
+// ********************* FUNCTIONS SPACE *****************
 
 
 //Function to Display Main Menu
@@ -292,7 +293,7 @@ void SetAlarm(void)
         // initialize the alarms to known values, clear the alarm flags, clear the alarm interrupt flags
         ClearAlarm();
         Alarm_set = false;
-        TM1638.displayText("no ALRn ");
+        TM1638.displayText("ALRn CLr");
         delay(displayinterval);
         break;
       case  0x40 :
@@ -311,7 +312,7 @@ void SetAlarm(void)
   }
 }
 
-//Functiom to set brightness called from settings
+//Function to set brightness called from settings
 void Brightness(void)
 {
 
@@ -345,7 +346,6 @@ void Brightness(void)
 //3 =  just Date DD.MM.YYYY
 //4 = Time and Date HH.MM.DD.MM
 //5 = Temperature TEMP.NN.NN
-
 void Display(uint8_t DisplayMode)
 {
   tmElements_t tm;
@@ -376,7 +376,7 @@ void Display(uint8_t DisplayMode)
   }
 }
 
-//Switch All LEDS on  TM1638 on or off, if button one pressed
+//Switch All LEDS on  TM1638 on or off, if button S1 pressed on main menu
 void setLEDonoff(void)
 {
   for (uint8_t position = 0; position < 8; position++)
@@ -385,6 +385,8 @@ void setLEDonoff(void)
   }
 }
 
+// Show the alarm reads the SRAM of DS3231 for alarm 2 and gets
+// values and displays them ,  called from main
 void  ShowAlarm(void)
 {
   
@@ -414,6 +416,7 @@ void  ShowAlarm(void)
 
 }
 
+// Read and debounce the buttons form TM1638
 uint8_t buttonsRead(void)
 {
   uint8_t buttons = 0;
@@ -426,7 +429,7 @@ uint8_t buttonsRead(void)
 }
 
 // initialize the alarms to known values, clear the alarm flags, clear the alarm interrupt flags
-// Called at init(optional) and also by ALamr clear option in Alarm menu
+// Called at init(optional) and also by ALarm clear option in Alarm menu
 void ClearAlarm(void)
 {
   RTC.setAlarm(ALM1_MATCH_DATE, 0, 0, 0, 1);
