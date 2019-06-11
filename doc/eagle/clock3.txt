@@ -1,0 +1,26 @@
+Partlist exported from /home/gavin/EAGLE/projects/Arduino_projects/clock3/clock3.sch at 11/06/2019 14:52
+
+Part      Value         Device                    Package       Description                                                                                                     PROD_ID    SPICEPREFIX VALUE
+C1        0.1uF         C-EU075-052X106           C075-052X106  CAPACITOR, European symbol                                                                                                                  
+C4        22pF          C2.5/6                    C2.5-6        CAPACITOR                                                                                                                                   
+C5        22pF          C2.5/6                    C2.5-6        CAPACITOR                                                                                                                                   
+C6        100nF         C2.5/6                    C2.5-6        CAPACITOR                                                                                                                                   
+C7        10uF          CPOL-EUE5-5               E5-5          POLARIZED CAPACITOR, European symbol                                                                                       C                
+C8        1uF           CPOL-EUE5-5               E5-5          POLARIZED CAPACITOR, European symbol                                                                                       C                
+D1        1N4002        1N4004                    DO41-10       DIODE                                                                                                                                       
+D2        1N4002        1N4004                    DO41-10       DIODE                                                                                                                                       
+DS3231RTC DS3231        CONN_06NO_SILK_FEMALE_PTH 1X06_NO_SILK  Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections CONN-08437                  
+IC2       LM317         LM317TS                   317TS         VOLTAGE REGULATOR                                                                                                                           
+J1        TM1638        CONN_05                   1X05          Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections                             
+J2        VIN           CONN_02PTH2               1X02_BIG      Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections                             
+J3        BUZZER HEADER CONN_02PTH2               1X02_BIG      Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections                             
+R1        220           R-EU_0309/10              0309/10       RESISTOR, European symbol                                                                                                  R                
+R2        660           R-EU_0309/10              0309/10       RESISTOR, European symbol                                                                                                  R                
+R3        10K           R-EU_0309/10              0309/10       RESISTOR, European symbol                                                                                                  R                
+R4        10K           R-EU_0309/10              0309/10       RESISTOR, European symbol                                                                                                  R                
+R5        10K           R-EU_0309/10              0309/10       RESISTOR, European symbol                                                                                                  R                
+R6        10K           R-EU_0309/10              0309/10       RESISTOR, European symbol                                                                                                  R                
+R7        2.2K          R-EU_0309/10              0309/10       RESISTOR, European symbol                                                                                                  R                
+T1        2N2222        2N2222                    TO92-EBC-OVAL NPN TRANSISTOR                                                                                                                              
+U1        328P          ATMEGA328P_PDIP           DIP28         Atmel 328P                                                                                                      IC-09136               328P 
+X1        16MHZ         CRYSTALS-NOGND-HC49       HC49          CRYSTALS CAN NOT GROUNDED                                                                                                                   

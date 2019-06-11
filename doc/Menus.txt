@@ -1,0 +1,9 @@
+"Switch ",Code,"Main menu","Settings menu","Time set","Date Set","Alarm menu",Brightness
+S1,0x01,"Lights on/off",,,,,
+S2,0x02,"Time ","Back to Main Menu","Back to Main Menu","Back to Main Menu","Back to Main Menu","Back to Main Menu"
+S3,0x04,Date,"timeSet GOTO","DateSet GOTO","Save Time/date","Save Alarm",
+S4,0x08,Time/date,"AlarmSet GOTO ",,,"Beep Buzzer",
+S5,0x10,Temperature,"brightness GOTO",,,"Clear Alarm",
+S6,0x20,"Alarm Time",,,days++,,
+S7,0x40,Sleep,,Hour++,months++,Hours++,
+S8,0x80,"settings menu",,Minute++,Years++,minutes++,brightness++
