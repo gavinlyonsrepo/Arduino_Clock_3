@@ -18,9 +18,9 @@
 
 // TM1638 Setup
 // I/O pins on the Arduino connected to Tm1638 strobe, clock, data
-#define  STROBE_TM 4
-#define  CLOCK_TM 6
-#define  DIO_TM 7
+#define  STROBE_TM 6
+#define  CLOCK_TM 7
+#define  DIO_TM 8
 TM1638plus TM1638(STROBE_TM, CLOCK_TM , DIO_TM);
 
 // Intervals and delays
@@ -29,7 +29,7 @@ const long  interval  = 225; // interval at which to debounce button readback fu
 #define displayinterval  1500 // interval for displaying Info- once offs, hello etc
 
 //Pin defines for alarm and buzzer
-#define buzzer 10
+#define buzzer A2
 #define AlarmInput 2
 
 //Control vars
