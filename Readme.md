@@ -13,8 +13,10 @@ In src folder you will find the arduino ino file with the source code.
 It includes two libraries. Both are found in arduino library manager.
 The first one is written by me. Urls included.
 
-1. <TM1638plus.h> [URL Link to library](https://github.com/gavinlyonsrepo/TM1638plus)
-2. <DS3232RTC.h>  [URL Link to library](https://github.com/JChristensen/DS3232RTC)
+| Library name | Version | Author | Link |
+| --- | --- | --- | --- |
+| TM1638plus.h | 1.0.1 | Gavin Lyons | [URL Link to library](https://github.com/gavinlyonsrepo/TM1638plus) |
+| DS3232RTC.h  | 1.2.6 | JChristensen | [URL Link to library](https://github.com/JChristensen/DS3232RTC) |
 
 
 Operation:

@@ -81,7 +81,6 @@ void setup() {
 //*************************** MAIN LOOP **************
 void loop() {
 
-  if (MainMode == 2) Display(MainMode);   //Default display
   MainMenu(); //Display MainMenu
 
   if ( !digitalRead(AlarmInput)  )
@@ -106,7 +105,6 @@ void MainMenu(void)
     case 0x01:
       LEDS_on_flag = !LEDS_on_flag ;
       setLEDonoff();
-      digitalWrite(buzzer, LOW);
       break;
     case 0x02 :
       MainMode = 2;
@@ -139,6 +137,8 @@ void MainMenu(void)
       SettingsMenuDisplay();
       break;
   }
+  if (MainMode == 2) Display(MainMode);   //live display
+  if (MainMode == 4) Display(MainMode);   //live display
 }
 
 // Function to display the settings menu Called from Main
@@ -150,7 +150,7 @@ void SettingsMenuDisplay(void)
     uint8_t buttons = buttonsRead();
     switch (buttons)
     {
-      case 0x02 : Display(2); break;
+      case 0x02 : MainMode=2; break;
       case 0x04 :
         SetTime();
         break;
@@ -293,6 +293,7 @@ void SetAlarm(void)
         // initialize the alarms to known values, clear the alarm flags, clear the alarm interrupt flags
         ClearAlarm();
         Alarm_set = false;
+        digitalWrite(buzzer, LOW);
         TM1638.displayText("ALRn CLr");
         delay(displayinterval);
         break;
@@ -363,7 +364,7 @@ void Display(uint8_t DisplayMode)
       TM1638.displayText(datebuf);
       break;
     case 4 :
-      sprintf(datebuf, "%02d.%02d.%02d.%02d", tm.Hour, tm.Minute, tm.Day, tm.Month, tm.Year);
+      sprintf(datebuf, "%02d.%02d.%02d.%02d", tm.Hour, tm.Minute, tm.Day, tm.Month);
       TM1638.displayText(datebuf);
       break;
     case 5 :
