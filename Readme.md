@@ -69,6 +69,24 @@ Menu modes , button function
 A spreadsheet in "doc" folder of this repo shows the button functions(S1 to S8),
 on TM1638 module for the various menus. File is called Menus.gnumeric.
 
+Current consumption
+-----------------------
+
+| Brightness level | Current(ma) | Mode | 
+| --- | --- | --- |
+| 0 | 40 | HH:MM:SS | 
+| 0  | 44 | HH:MM:DD:MM | 
+| 2  | 66 | HH:MM:SS | 
+| 2  | 80 | HH:MM:DD:MM | 
+| 7  | 149 | HH:MM:SS| 
+| 7  | 195 | HH:MM:DD:MM  | 
+| n/a  | 31 | sleep | 
+
+Note: As of first verion, Sleep mode does not put microcontroller to sleep just 
+turns off display. Also there are two power LEDS on TM1638 and RTC modules. which are drawing 
+a signifcant amount of current perhaps ~10-20mA, these can be removed but are still on during these measurments. 
+
+
 Parts List
 ------------------------------
 In the doc folder there is an eagle subfolder with the BOM and schematic image.
