@@ -57,6 +57,9 @@ void setup() {
   Serial.begin(9600);
   Serial.println("Arduino CLock three, Serial comms up, Start");*/
 
+  //Tm1638 Setup
+  TM1638.displayBegin();
+  
   //RTC
   setSyncProvider(RTC.get);   // the function to get the time from the RTC
   if (timeStatus() != timeSet)
@@ -72,6 +75,7 @@ void setup() {
   pinMode(AlarmInput, INPUT_PULLUP);
   ClearAlarm();
 
+ 
   TM1638.displayText("HELLO   ");
   delay(displayinterval);
 }
