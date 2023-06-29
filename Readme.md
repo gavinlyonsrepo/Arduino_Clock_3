@@ -66,7 +66,9 @@ on TM1638 module for the various menus. File is called Menus.ods.
 **Libraries**
 
 It includes two libraries. Both are found in arduino library manager.
-The first one is written by Author . 
+The first one is written by Author.  Note the DS3232RTC library 
+has been heavily updated in Version 2.0.0 and is no longer backward compatible.
+See [github issue 1](https://github.com/gavinlyonsrepo/Arduino_Clock_3/issues/1)
 
 | Library name | Version | Author | Link |
 | --- | --- | --- | --- |
